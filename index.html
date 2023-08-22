@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Transformation</title>
+</head>
+<body>
+    <div class="left">
+        <div class="shape">
+            <div id="square"></div>
+            <button onclick="animateShape('square')">Square</button>
+        </div>
+        <div class="shape">
+            <div id="triangle"></div> 
+            <button onclick="animateShape('triangle')">Triangle</button>
+        </div>
+        <div class="shape">
+            <div id="circle"></div>
+            <button onclick="animateShape('circle')">Circle</button>
+        </div>
+        <div class="shape">
+            <div id="rhombus"></div>
+            <button onclick="animateShape('rhombus')">Rhombus</button>
+        </div>
+        <div class="shape">
+            <div id="hexagon"></div>
+            <button onclick="animateShape('hexagon')">Hexagon</button>
+        </div>
+    </div>
+
+    <div class="center">
+
+    </div>
+
+    <div class="right">
+        <div>
+            <p>TRANSFORMATIONS</p>
+        </div>
+        <div class="transformation">
+            <div class="translation">
+                <p class="tran">Translation</p>
+                <button>+</button>
+                <button>-</button>
+            </div>
+            <div class="scale">
+                <p class="scale">Scale</p>
+                <button>+</button>
+                <button>-</button>
+            </div>
+            <div class="rotation">
+                <p class="rotate">Rotate</p>
+                <button>+</button>
+                <button>-</button>
+            </div>
+            <div class="reset">
+                <button>RESET</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

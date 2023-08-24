@@ -8,29 +8,32 @@
 </head>
 <body>
     <div class="left">
-        <div class="shape">
-            <div id="square"></div>
-            <button onclick="animateShape('square')">Square</button>
+        <div class="text" ondrop="drop(event)" ondragover="allowDrop(event)">
+            Shapes
         </div>
-        <div class="shape">
-            <div id="triangle"></div> 
-            <button onclick="animateShape('triangle')">Triangle</button>
+        <div class="shape" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="square"></div>
+            <p>Square</p>
         </div>
-        <div class="shape">
-            <div id="circle"></div>
-            <button onclick="animateShape('circle')">Circle</button>
+        <div class="shape" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="triangle"></div> 
+            <p>Triangle</p>
         </div>
-        <div class="shape">
-            <div id="rhombus"></div>
-            <button onclick="animateShape('rhombus')">Rhombus</button>
+        <div class="shape" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="circle"></div>
+            <p>Circle</p>
         </div>
-        <div class="shape">
-            <div id="hexagon"></div>
-            <button onclick="animateShape('hexagon')">Hexagon</button>
+        <div class="shape" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="rhombus"></div>
+            <p>Rhombus</p>
+        </div>
+        <div class="shape" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="hexagon"></div>
+            <p>Hexagon</p>
         </div>
     </div>
 
-    <div class="center">
+    <div class="center" ondrop="drop(event);handleDrop(event)" ondragover="allowDrop(event)">
 
     </div>
 
@@ -41,21 +44,21 @@
         <div class="transformation">
             <div class="translation">
                 <p class="tran">Translation</p>
-                <button>+</button>
-                <button>-</button>
+                <button onclick="translate('+')">+</button>
+                <button onclick="translate('-')">-</button>
             </div>
             <div class="scale">
                 <p class="scale">Scale</p>
-                <button>+</button>
-                <button>-</button>
+                <button onclick="scale('+')">+</button>
+                <button onclick="scale('-')">-</button>
             </div>
             <div class="rotation">
                 <p class="rotate">Rotate</p>
-                <button>+</button>
-                <button>-</button>
+                <button onclick="rotate('+')">+</button>
+                <button onclick="rotate('-')">-</button>
             </div>
             <div class="reset">
-                <button>RESET</button>
+                <button onclick="resetTransformations()">RESET</button>
             </div>
         </div>
     </div>

@@ -25,17 +25,18 @@ body{
     align-items: center;
 }
 
-button{
-    height: 5vh;
-    width: 5vw;
-    margin-top: 1vh;
-    border-radius: 100vmax;
-    font-size: 1em;
-    cursor: pointer;
+.text{
+    color: white;
+    text-align: center;
     font-family: 'Baloo Bhai 2', cursive;
+    font-size: xx-large;
 }
 
-
+.shape p{
+    color: wheat;
+    text-align: center;
+    font-family: 'Baloo Bhai 2', cursive;
+}
 
 #square{
     height: 11vh;
@@ -71,11 +72,20 @@ button{
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
 }
 
+.shapes{
+    height: 11vh;
+    width: 11vh;
+    background-color: chartreuse;
+}
+
 .center{
     margin-top: 10vh;
     height: 80vh;
     width:50vw;
-    border: 2px dashed black;
+    border: 2px dashed white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .right{
@@ -92,7 +102,7 @@ button{
     text-align: center;
     margin-top: 4vh;
     font-family: 'Baloo Bhai 2', cursive;
-    font-size: larger;
+    font-size: x-large;
 }
 
 .transformation{
@@ -103,13 +113,12 @@ button{
     align-items: center;
 }
 
-@keyframes slideIn {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-
+button{
+    height: 5vh;
+    width: 5vw;
+    margin-top: 1vh;
+    border-radius: 100vmax;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: 'Baloo Bhai 2', cursive;
+}

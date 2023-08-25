@@ -33,8 +33,10 @@
         </div>
     </div>
 
-    <div class="center" ondrop="drop(event);handleDrop(event)" ondragover="allowDrop(event)">
-
+    <div class="center">
+        <div id="play-div" ondrop="drop(event);handleDrop(event)" ondragover="allowDrop(event)">
+            
+        </div>
     </div>
 
     <div class="right">
@@ -44,8 +46,8 @@
         <div class="transformation">
             <div class="translation">
                 <p class="tran">Translation</p>
-                <button onclick="translate('+')">+</button>
-                <button onclick="translate('-')">-</button>
+                <button onclick="applyTranslate('+')">+</button>
+                <button onclick="applyTranslate('-')">-</button>
             </div>
             <div class="scale">
                 <p class="scale">Scale</p>

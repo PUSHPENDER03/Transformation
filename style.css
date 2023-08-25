@@ -81,11 +81,19 @@ body{
 .center{
     margin-top: 10vh;
     height: 80vh;
-    width:50vw;
+    width:60vw;
     border: 2px dashed white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#play-div{
+    justify-content: center;
+    align-items: center;
+    height: 11vh;
+    width: 11vw;
 }
 
 .right{

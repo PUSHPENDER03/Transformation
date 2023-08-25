@@ -23,12 +23,12 @@ function drop(event) {
 }
 
 function applyTransform() {
-    const div = document.getElementById("play-div");
+    const div = document.getElementById("play-div"); // Use the correct ID here
     const transformValue = `translate(${currentPosition.x}px, ${currentPosition.y}px) scale(${currentScale}) rotate(${currentRotation}deg)`;
     div.style.transform = transformValue;
 }
 
-function translate(direction) {
+function applyTranslate(direction) {
     const step = 10;
     if (direction === '+') {
         currentPosition.x += step;
@@ -37,11 +37,12 @@ function translate(direction) {
         currentPosition.x -= step;
         currentPosition.y -= step;
     }
+    console.log("Current position:", currentPosition);
     applyTransform();
 }
 
 function scale(direction) {
-    const step = 0.1;
+    const step = 1;
     if (direction === '+') {
         currentScale += step;
     } else {
@@ -67,10 +68,6 @@ function resetTransformations() {
     applyTransform();
 }
 
-function allowDrop(event) {
-    event.preventDefault();
-}
-
 function handleDragStart(event) {
     event.dataTransfer.setData("text/plain", event.target.id);
 }
@@ -82,7 +79,8 @@ function handleDrop(event) {
 
     if (draggedDiv) {
         const clonedDiv = draggedDiv.cloneNode(true);
-        draggedDiv.id = "play-div";
-        event.target.appendChild(draggedDiv);
+        clonedDiv.id = "play-div";
+        event.target.appendChild(clonedDiv);
+        applyTransform(); 
     }
-}         
+}

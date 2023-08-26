@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Transformation</title>
+</head>
+<body>
+    <div class="left">
+        <div class="text" ondrop="drop(event)" ondragover="allowDrop(event)">
+            Shapes
+        </div>
+        <div class="shape" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="square"></div>
+            <p>Square</p>
+        </div>
+        <div class="shape" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="triangle"></div> 
+            <p>Triangle</p>
+        </div>
+        <div class="shape" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="circle"></div>
+            <p>Circle</p>
+        </div>
+        <div class="shape" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="rhombus"></div>
+            <p>Rhombus</p>
+        </div>
+        <div class="shape" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="hexagon"></div>
+            <p>Hexagon</p>
+        </div>
+    </div>
+
+    <div class="center">
+        <div id="play-div" ondrop="drop(event);handleDrop(event)" ondragover="allowDrop(event)">
+            
+        </div>
+    </div>
+
+    <div class="right">
+        <div>
+            <p>TRANSFORMATIONS</p>
+        </div>
+        <div class="transformation">
+            <div class="translation">
+                <p class="tran">Translation</p>
+                <button onclick="applyTranslate('+')">+</button>
+                <button onclick="applyTranslate('-')">-</button>
+            </div>
+            <div class="scale">
+                <p class="scale">Scale</p>
+                <button onclick="scale('+')">+</button>
+                <button onclick="scale('-')">-</button>
+            </div>
+            <div class="rotation">
+                <p class="rotate">Rotate</p>
+                <button onclick="rotate('+')">+</button>
+                <button onclick="rotate('-')">-</button>
+            </div>
+            <div class="reset">
+                <button onclick="resetTransformations()">RESET</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

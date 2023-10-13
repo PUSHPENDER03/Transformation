@@ -1,6 +1,6 @@
 let currentScale = 1;
 let currentRotation = 0;
-let currentPosition = { x: 0, y: 0 }
+let currentPosition = { x: 0, y: 0 };
 
 
 function dragStart(event) {
